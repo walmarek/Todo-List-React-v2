@@ -18,7 +18,19 @@ function App() {
   };
 
   const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  };
+
+  const toggleTaskDone = (id) => {
+    setTasks((tasks) =>
+      tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, done: !task.done };
+        }
+
+        return task;
+      })
+    );
   };
 
   return (
@@ -27,7 +39,14 @@ function App() {
       <Section title="Add new task" body={<Form />} />
       <Section
         title="To-do list"
-        body={<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} />}
+        body={
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
+          />
+        }
         buttons={
           <Buttons
             tasks={tasks}
