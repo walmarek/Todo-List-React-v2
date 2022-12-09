@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./style.css";
 
 const Form = ({ addNewTask }) => {
@@ -6,19 +6,26 @@ const Form = ({ addNewTask }) => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    addNewTask(newTaskContent.trim());
-    setNewTaskContent("");
+    if (newTaskContent.trim() !== "") {
+      addNewTask(newTaskContent.trim());
+      setNewTaskContent("");
+    }
   };
+
+  const inputElement = useRef(null);
 
   return (
     <form className="form" onSubmit={onFormSubmit}>
       <input
+        ref={inputElement}
         value={newTaskContent}
         className="form__input"
         placeholder=" What's your new task?"
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
-      <button className="form__button">Add task</button>
+      <button onClick={() => {inputElement.current.focus()}} className="form__button">
+        Add task
+      </button>
     </form>
   );
 };

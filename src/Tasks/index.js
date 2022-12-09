@@ -9,7 +9,8 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
           task.done && hideDone ? "list__item--hidden" : ""
         }`}
       >
-        <button onClick={() => toggleTaskDone(task.id)}
+        <button
+          onClick={() => toggleTaskDone(task.id)}
           className="list__item--button list__item--button-toggleDone"
           alt="checkbox button"
         >
@@ -18,7 +19,8 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         <span className={`${task.done ? "list__item--content-done" : ""} `}>
           {task.content}
         </span>
-        <button onClick={() => removeTask(task.id)}
+        <button
+          onClick={() => removeTask(task.id)}
           className="list__item--button list__item--button-remove"
           alt="delete button"
         >
