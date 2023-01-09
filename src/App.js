@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -21,17 +21,14 @@ function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
-  const toggleTaskDone = (id) => {
+  const toggleTaskDone = (id) => 
     setTasks((tasks) =>
-      tasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, done: !task.done };
-        }
-
-        return task;
-      })
+      tasks.map((task) => 
+        (task.id === id) ?
+           { ...task, done: !task.done } :  task
+      )
     );
-  };
+  
 
   const setAllDone = () => {
     setTasks((tasks) => tasks.map((task) => ({ ...task, done: true })));
