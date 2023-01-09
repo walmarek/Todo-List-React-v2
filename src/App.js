@@ -21,14 +21,12 @@ function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
-  const toggleTaskDone = (id) => 
+  const toggleTaskDone = (id) =>
     setTasks((tasks) =>
-      tasks.map((task) => 
-        (task.id === id) ?
-           { ...task, done: !task.done } :  task
+      tasks.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task
       )
     );
-  
 
   const setAllDone = () => {
     setTasks((tasks) => tasks.map((task) => ({ ...task, done: true })));
