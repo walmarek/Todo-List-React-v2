@@ -14,6 +14,20 @@ const Form = ({ addNewTask }) => {
     }
   };
 
+//   const onFormSubmit = (e) => {
+//     e.preventDefault();
+
+//     const trimmedNewTaskContent = newTaskContent.trim();
+
+//     if (!trimmedNewTaskContent) {
+//       return;
+//     }
+// addNewTask(trimmedNewTaskContent);
+// setNewTaskContent("")
+//   }
+
+
+
   return (
     <form className="form" onSubmit={onFormSubmit}>
       <input
