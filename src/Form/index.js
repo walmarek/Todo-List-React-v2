@@ -14,7 +14,7 @@ const Form = ({ addNewTask }) => {
     }
   };
 
-  //other way to write the code
+  //other way to code
   //   const onFormSubmit = (e) => {
   //     e.preventDefault();
 
