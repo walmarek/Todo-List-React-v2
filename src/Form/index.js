@@ -14,19 +14,18 @@ const Form = ({ addNewTask }) => {
     }
   };
 
-//   const onFormSubmit = (e) => {
-//     e.preventDefault();
+  //other way to write the code
+  //   const onFormSubmit = (e) => {
+  //     e.preventDefault();
 
-//     const trimmedNewTaskContent = newTaskContent.trim();
+  //     const trimmedNewTaskContent = newTaskContent.trim();
 
-//     if (!trimmedNewTaskContent) {
-//       return;
-//     }
-// addNewTask(trimmedNewTaskContent);
-// setNewTaskContent("")
-//   }
-
-
+  //     if (!trimmedNewTaskContent) {
+  //       return;
+  //     }
+  // addNewTask(trimmedNewTaskContent);
+  // setNewTaskContent("")
+  //   }
 
   return (
     <form className="form" onSubmit={onFormSubmit}>
