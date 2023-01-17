@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Form from "./Form";
+import TasksForm from "./TasksForm";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
-import Section from "./Section";
-import Header from "./Header";
+import Wrapper from "./Wrapper";
+import Title from "./Title";
 import Container from "./Container";
 
 function App() {
@@ -48,9 +48,9 @@ function App() {
 
   return (
     <Container>
-      <Header title="To-do list" />
-      <Section title="Add new task" body={<Form addNewTask={addNewTask} />} />
-      <Section
+      <Title title="To-do list" />
+      <Wrapper title="Add new task" body={<TasksForm addNewTask={addNewTask} />} />
+      <Wrapper
         title="To-do list"
         body={
           <Tasks
