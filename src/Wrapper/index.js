@@ -1,11 +1,11 @@
-import { Section, Div, Title} from "./styled"
+import { Section, Header, Title } from "./styled";
 
 const Wrapper = ({ title, body, buttons }) => (
   <Section>
-    <Div>
+    <Header>
       <Title className="section__header--list">{title}</Title>
       {buttons}
-    </Div>
+    </Header>
     {body}
   </Section>
 );
