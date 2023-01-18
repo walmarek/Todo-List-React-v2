@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useTasks = () => {
   const [tasks, setTasks] = useState(
-    () => JSON.parse(localStorage.getItem("tasks")) || []
+    JSON.parse(localStorage.getItem("tasks")) || []
   );
 
   useEffect(() => {
@@ -34,5 +34,6 @@ export const useTasks = () => {
       },
     ]);
   };
+
   return { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask };
 };
