@@ -6,15 +6,17 @@ export const ListButtons = styled.div`
 `;
 
 export const Button = styled.button`
+margin: 4px;
+padding: 4px;
   border: none;
   cursor: pointer;
-  background: transparent;
   color: teal;
   transition: 0.5s;
 
   @media (max-width: 767px) {
     width: 100%;
-    margin: 10px;
+    margin: 5px;
+    background: transparent;
   }
 
   &:hover {
