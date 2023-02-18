@@ -1,5 +1,8 @@
 import { ListButtons, Button } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
+import AlertConfirm from "react-alert-confirm";
+import 'react-alert-confirm/lib/style.css';
+
 import {
   toggleHideDone,
   setAllDone,
@@ -16,6 +19,16 @@ const Buttons = () => {
 
   const dispatch = useDispatch();
 
+  const openConfirm = () => {
+    AlertConfirm({
+      title: "Are you sure?",
+      desc: "This will dalete all tasks!",
+      onOk: () => {
+        dispatch(clearAll());
+      },
+    });
+  };
+
   return (
     <ListButtons>
       {isListEmpty && (
@@ -29,7 +42,7 @@ const Buttons = () => {
           >
             Complete all
           </Button>
-          <Button onClick={() => dispatch(clearAll())}>Clear all</Button>
+          <Button onClick={() => openConfirm()}>Clear all</Button>
         </>
       )}
     </ListButtons>
