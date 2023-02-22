@@ -1,7 +1,7 @@
 import { ListButtons, Button } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 import AlertConfirm from "react-alert-confirm";
-import 'react-alert-confirm/lib/style.css';
+import "react-alert-confirm/lib/style.css";
 
 import {
   toggleHideDone,
@@ -10,6 +10,7 @@ import {
   selectHideDone,
   selectIsListEmpty,
   selectAreAllTasksDone,
+  fetchExampleTasks,
 } from "../tasksSlice";
 
 const Buttons = () => {
@@ -31,6 +32,9 @@ const Buttons = () => {
 
   return (
     <ListButtons>
+      <Button onClick={() => dispatch(fetchExampleTasks())}>
+        Get example tasks
+      </Button>
       {isListEmpty && (
         <>
           <Button onClick={() => dispatch(toggleHideDone())}>
