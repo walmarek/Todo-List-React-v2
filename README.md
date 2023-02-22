@@ -19,7 +19,7 @@ You can add new tasks, check it as done and delete when you think it's not impor
 ## [**Todo list-react - link**](https://walmarek.github.io/todo-list-react/)
 
 <p align="center">
-  <img src="https://github.com/walmarek/todo-list-react/blob/main/public/to-do-list.png?raw=true">
+  <img src="https://github.com/walmarek/todo-list-react/blob/main/public/to-do-list.gif?raw=">
 </p>
 
 
