@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://walmarek.github.io/todo-list-react/",
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.10",
+    "@mui/styled-engine-sc": "^5.11.9",
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,6 +21,7 @@
     "react-scripts": "^5.0.1",
     "redux-saga": "^1.2.2",
     "styled-components": "^5.3.6",
+    "vite": "^4.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
