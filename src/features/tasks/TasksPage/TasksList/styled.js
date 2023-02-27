@@ -1,4 +1,10 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+
+export const StyledLink = styled(Link)`
+  color: teal;
+  text-decoration: none;
+`;
 
 export const List = styled.ul`
   padding: 20px;
@@ -7,7 +13,7 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  padding: 10px;
+  padding: 8px;
   border-bottom: 1px solid #eee;
   display: grid;
   grid-template-columns: auto 1fr auto;
