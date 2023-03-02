@@ -5,13 +5,17 @@ import TasksForm from "./TasksForm";
 import TasksList from "./TasksList";
 import Search from "./Search";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchExampleTasks, selectExampleTasksIsLoading, selectIsListEmpty } from "../tasksSlice";
+import {
+  fetchExampleTasks,
+  selectExampleTasksIsLoading,
+  selectIsListEmpty,
+} from "../tasksSlice";
 import { Button } from "./styled";
 import Buttons from "./Buttons";
 
 function TasksPage() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectExampleTasksIsLoading)
+  const isLoading = useSelector(selectExampleTasksIsLoading);
 
   const isListEmpty = useSelector(selectIsListEmpty);
 
@@ -24,7 +28,8 @@ function TasksPage() {
         buttons={
           <Button
             onClick={() => dispatch(fetchExampleTasks())}
-            disabled={isListEmpty || isLoading}>
+            disabled={isListEmpty || isLoading}
+          >
             {isLoading ? "Loading..." : "Get example tasks"}
           </Button>
         }

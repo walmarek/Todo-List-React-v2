@@ -6,7 +6,7 @@ import { Field, Section } from "./styled";
 export const Textarea = () => {
   const [details, setDetails, removeDetails] = useLocalStorage("");
 
-// work in progress...
+  // work in progress...
 
   return (
     <>
