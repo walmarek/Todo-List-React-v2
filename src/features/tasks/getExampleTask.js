@@ -1,5 +1,5 @@
 export const getExampleTasks = async () => {
-  const response = await fetch("/todo-list-react-2/exampleTasks.json");
+  const response = await fetch("/Todo-List-React-v2/exampleTasks.json");
 
   if (!response.ok) {
     new Error(response.statusText);
