@@ -9,7 +9,7 @@ function* fetchExampleTasksHandler() {
     yield delay(900);
     yield put(setTasks(exampleTasks));
   } catch (error) {
-    yield put(alert("Ups Cannot get examples!"));
+    yield put(alert("Ups... Cannot get examples!"));
   }
 }
 
